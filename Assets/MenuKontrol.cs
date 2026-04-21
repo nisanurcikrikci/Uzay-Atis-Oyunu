@@ -7,6 +7,10 @@ public class MenuKontrol : MonoBehaviour
     Animator _animator;
     public void OyunaBasla()
     {
+        if (Time.timeScale == 0f)
+        {
+            return;
+        }
         SceneManager.LoadScene("Oyun");
     }
 
@@ -27,11 +31,19 @@ public class MenuKontrol : MonoBehaviour
     }
     public void MouseGirdi()
     {
+        if (Time.timeScale == 0f)
+        {
+            return;
+        }
         if (_animator != null) _animator.SetBool("UstundeMi", true);
     }
 
     public void MouseCikti()
     {
+        if (Time.timeScale == 0f)
+        {
+            return;
+        }
         if (_animator != null) _animator.SetBool("UstundeMi", false);
     }
 }

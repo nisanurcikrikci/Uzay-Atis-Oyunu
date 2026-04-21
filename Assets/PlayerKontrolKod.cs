@@ -26,6 +26,10 @@ public class PlayerKontrolKod : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f)
+        {
+            return;
+        }
         bool yukariBasildiMi = false;
         bool asagiBasildiMi = false;
         if (Input.GetKey(KeyCode.W))
