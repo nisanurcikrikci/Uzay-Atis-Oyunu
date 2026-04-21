@@ -8,6 +8,11 @@ public class MenuKontrol : MonoBehaviour
         SceneManager.LoadScene("Oyun");
     }
 
+    public void OyundanCikis()
+    {
+        Debug.Log("Oyundan Çıkıldı");
+        Application.Quit();
+    }
     void Start()
     {
 
