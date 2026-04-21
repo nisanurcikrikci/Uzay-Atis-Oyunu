@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Mermi
+  - Dusman
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Arkaplan
+    uniqueID: 1138642393
+    locked: 0
+  - name: Gezegen
+    uniqueID: 1223529145
+    locked: 0
+  - name: Mermi
+    uniqueID: 269918577
+    locked: 0
+  - name: SavasAlani
+    uniqueID: 3203252999
+    locked: 0
+  - name: "Y\u0131ld\u0131zlar"
+    uniqueID: 288577827
+    locked: 0
+  m_RenderingLayers:
+  - Default
