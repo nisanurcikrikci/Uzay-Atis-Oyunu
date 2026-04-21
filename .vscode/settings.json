@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "07.slnx"
+    "dotnet.defaultSolution": "Odev.slnx"
 }

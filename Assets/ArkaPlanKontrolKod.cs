@@ -15,7 +15,6 @@ public class ArkaPlanKontrolKod : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         Arkaplan.position += Vector3.left * ArkaplanHiz * Time.deltaTime;
