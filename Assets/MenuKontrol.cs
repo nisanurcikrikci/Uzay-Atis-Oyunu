@@ -13,6 +13,17 @@ public class MenuKontrol : MonoBehaviour
         }
         SceneManager.LoadScene("Oyun");
     }
+    public void MenuyeDon()
+    {
+        SceneManager.LoadScene("Giris");
+        Time.timeScale = 1f;
+    }
+    public void YenidenBaslat()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
+
+    }
 
     public void OyundanCikis()
     {

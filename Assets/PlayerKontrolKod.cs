@@ -5,7 +5,8 @@ public class PlayerKontrolKod : MonoBehaviour
     public AudioSource AtesSesi;
     public GameObject Flash;
     public Transform Namlu;
-    public GameObject PlazmaSablon;
+    public GameObject MermiSablon;
+    public GameObject ileri;
     Animator _animator;
     Rigidbody2D _rigidbody;
     Vector2 _hiz = Vector2.zero;
@@ -17,8 +18,8 @@ public class PlayerKontrolKod : MonoBehaviour
 
     public void AtesEt()
     {
-        var yeniPlazma = GameObject.Instantiate(PlazmaSablon);
-        yeniPlazma.transform.position = Namlu.position;
+        var yeniMermi = GameObject.Instantiate(MermiSablon);
+        yeniMermi.transform.position = Namlu.position;
         Flash.SetActive(true);
         AtesSesi.Play();
     }
@@ -32,6 +33,8 @@ public class PlayerKontrolKod : MonoBehaviour
         }
         bool yukariBasildiMi = false;
         bool asagiBasildiMi = false;
+        bool sagBasildiMi = false;
+        bool solBasildiMi = false;
         if (Input.GetKey(KeyCode.W))
         {
             yukariBasildiMi = true;
@@ -53,13 +56,38 @@ public class PlayerKontrolKod : MonoBehaviour
         {
             asagiBasildiMi = false;
         }
+        if (Input.GetKey(KeyCode.D))
+        {
+            if (_hiz.x < 0.5f)
+                _hiz += Vector2.right * 0.1f;
+            sagBasildiMi = true;
+            ileri.SetActive(true);
+        }
+        else
+        {
+            sagBasildiMi = false;
+            ileri.SetActive(false);
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            if (_hiz.x < 0.5f)
+                _hiz += Vector2.left * 0.1f;
+            solBasildiMi = true;
+            ileri.SetActive(false);
+        }
+        else
+        {
+            solBasildiMi = false;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             AtesEt();
         }
-        if (!asagiBasildiMi && !yukariBasildiMi)
+        if (!asagiBasildiMi && !yukariBasildiMi && !sagBasildiMi && !solBasildiMi)
+        {
             _hiz = Vector2.zero;
+        }
 
         _animator.SetBool("AsagiBasildiMi", asagiBasildiMi);
         _animator.SetBool("YukariBasildiMi", yukariBasildiMi);

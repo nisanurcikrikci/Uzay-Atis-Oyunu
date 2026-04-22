@@ -61,15 +61,12 @@ public class AyarlarKod : MonoBehaviour
     {
         if (AnaSes == null) return;
 
-        // Mevcut desibel değerlerini almak için değişkenler
         float menuDB, oyunDB, sfxDB;
 
-        // Mikser'den değerleri oku (Parametre isimleri mikserle aynı olmalı!)
         AnaSes.GetFloat("Menu", out menuDB);
         AnaSes.GetFloat("Game", out oyunDB);
         AnaSes.GetFloat("SFXV", out sfxDB);
 
-        // Desibeli tekrar 0-1 arası slider değerine çevir ve slider'a ata
         MenuSlider.value = Mathf.Pow(10, menuDB / 20);
         OyunSlider.value = Mathf.Pow(10, oyunDB / 20);
         SFXSlider.value = Mathf.Pow(10, sfxDB / 20);
