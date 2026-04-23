@@ -7,10 +7,12 @@ public class UfoKod : MonoBehaviour
     Rigidbody2D _rigidbody;
     float HedefY;
     float zamanlayici = 0f;
+    public PuanKod Puan;
 
     void Start()
     {
         SesYonetici = GameObject.Find("SesYonetici").GetComponent<SesKod>();
+        Puan = GameObject.Find("PuanYoneticisi").GetComponent<PuanKod>();
         _rigidbody = GetComponent<Rigidbody2D>();
         HedefY = transform.position.y;
     }
@@ -19,7 +21,7 @@ public class UfoKod : MonoBehaviour
     {
         _hiz.x = -1.0f;
 
-        if (true)
+        if (Puan.SuAnkiPuan() > 10)
         {
             zamanlayici += Time.deltaTime;
             if (zamanlayici >= 2f)
@@ -53,8 +55,10 @@ public class UfoKod : MonoBehaviour
     {
         if (collision.CompareTag("Mermi"))
         {
-            Destroy(gameObject);
+            Puan.PuanEkle(1);
             SesYonetici.PatlamaSesiCal();
+            Destroy(gameObject);
+
         }
     }
 }

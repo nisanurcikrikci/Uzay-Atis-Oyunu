@@ -11,10 +11,12 @@ public class GezegenKod : MonoBehaviour
 
     float ilkGenislik;
     public SesKod SesYonetici;
+    public PuanKod Puan;
 
     void Start()
     {
         SesYonetici = GameObject.Find("SesYonetici").GetComponent<SesKod>();
+        Puan = GameObject.Find("PuanYoneticisi").GetComponent<PuanKod>();
         if (CanSimge != null)
         {
             ilkGenislik = CanSimge.size.x;
@@ -48,6 +50,7 @@ public class GezegenKod : MonoBehaviour
         if (can <= 0)
         {
             SesYonetici.PatlamaSesiCal();
+            Puan.PuanEkle(2);
             Destroy(gameObject);
         }
     }
