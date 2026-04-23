@@ -64,8 +64,8 @@ public class AyarlarKod : MonoBehaviour
         float menuDB, oyunDB, sfxDB;
 
         AnaSes.GetFloat("Menu", out menuDB);
-        AnaSes.GetFloat("Game", out oyunDB);
-        AnaSes.GetFloat("SFXV", out sfxDB);
+        AnaSes.GetFloat("Oyun", out oyunDB);
+        AnaSes.GetFloat("SFX", out sfxDB);
 
         MenuSlider.value = Mathf.Pow(10, menuDB / 20);
         OyunSlider.value = Mathf.Pow(10, oyunDB / 20);

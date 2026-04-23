@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerKontrolKod : MonoBehaviour
 {
-    public AudioSource AtesSesi;
+    public SesKod SesYonetici;
     public GameObject Flash;
     public Transform Namlu;
     public GameObject MermiSablon;
@@ -12,6 +12,7 @@ public class PlayerKontrolKod : MonoBehaviour
     Vector2 _hiz = Vector2.zero;
     void Start()
     {
+        SesYonetici = GameObject.Find("SesYonetici").GetComponent<SesKod>();
         _animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }
@@ -21,7 +22,7 @@ public class PlayerKontrolKod : MonoBehaviour
         var yeniMermi = GameObject.Instantiate(MermiSablon);
         yeniMermi.transform.position = Namlu.position;
         Flash.SetActive(true);
-        AtesSesi.Play();
+        SesYonetici.MermiSesiCal();
     }
 
 
@@ -70,7 +71,7 @@ public class PlayerKontrolKod : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A))
         {
-            if (_hiz.x < 0.5f)
+            if (_hiz.x > -0.5f)
                 _hiz += Vector2.left * 0.1f;
             solBasildiMi = true;
             ileri.SetActive(false);
