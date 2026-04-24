@@ -8,7 +8,7 @@ public class GezegenKod : MonoBehaviour
 
     public SpriteRenderer CanSimge;
     public GameObject canGrubu;
-
+    public float canBariGorunmeSuresi = 1.0f;
     float ilkGenislik;
     public SesKod SesYonetici;
     public PuanKod Puan;
@@ -28,6 +28,15 @@ public class GezegenKod : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.left * hareketHizi * Time.deltaTime);
+        if (canBariGorunmeSuresi > 0)
+        {
+            canBariGorunmeSuresi -= Time.deltaTime; // Saniyeyi geri say
+
+            if (canBariGorunmeSuresi <= 0)
+            {
+                canGrubu.SetActive(false); // Süre bitince kapat
+            }
+        }
 
         if (transform.position.x < -1.9f) Destroy(gameObject);
     }
@@ -44,8 +53,8 @@ public class GezegenKod : MonoBehaviour
             CanSimge.size = yeniBoyut;
         }
 
-        StopAllCoroutines();
-        StartCoroutine(GosterGizle());
+        canGrubu.SetActive(true); // Barı aç
+        canBariGorunmeSuresi = 1f;
 
         if (can <= 0)
         {
@@ -55,12 +64,6 @@ public class GezegenKod : MonoBehaviour
         }
     }
 
-    IEnumerator GosterGizle()
-    {
-        canGrubu.SetActive(true);
-        yield return new WaitForSeconds(1f);
-        if (canGrubu != null) canGrubu.SetActive(false);
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

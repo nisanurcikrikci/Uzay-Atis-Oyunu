@@ -85,9 +85,13 @@ public class PlayerKontrolKod : MonoBehaviour
         {
             AtesEt();
         }
-        if (!asagiBasildiMi && !yukariBasildiMi && !sagBasildiMi && !solBasildiMi)
+        if (!asagiBasildiMi && !yukariBasildiMi)
         {
-            _hiz = Vector2.zero;
+            _hiz.y = 0;
+        }
+        if (!sagBasildiMi && !solBasildiMi)
+        {
+            _hiz.x = 0;
         }
 
         _animator.SetBool("AsagiBasildiMi", asagiBasildiMi);
