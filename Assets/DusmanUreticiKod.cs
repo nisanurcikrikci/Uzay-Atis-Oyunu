@@ -17,7 +17,7 @@ public class DusmanUretici : MonoBehaviour
     void DusmanOlusturGezegen()
     {
 
-        float rastgeleY = Random.Range(-0.7f, 0.8f);
+        float rastgeleY = Random.Range(-0.7f, 0.75f);
         float rastgeleX = Random.Range(2F, 3f);
         Vector3 olusmaYeri = new Vector3(rastgeleX, rastgeleY, 0f);
 
@@ -28,7 +28,7 @@ public class DusmanUretici : MonoBehaviour
     }
     void DusmanOlusturUfo()
     {
-        float rastgeleY = Random.Range(-0.7f, 0.8f);
+        float rastgeleY = Random.Range(-0.7f, 0.75f);
         float rastgeleX = Random.Range(4f, 6f);
         Vector3 olusmaYeri = new Vector3(rastgeleX, rastgeleY, 0f);
 

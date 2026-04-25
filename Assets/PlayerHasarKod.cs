@@ -10,6 +10,7 @@ public class PlayerHasarKod : MonoBehaviour
     Vector2 BaslangicPozisyon;
     public SesKod SesYonetici;
     public GameObject ileri;
+    public CarpanYoneticiKod carpanDegeri;
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -54,7 +55,7 @@ public class PlayerHasarKod : MonoBehaviour
         foreach (GameObject d in GameObject.FindGameObjectsWithTag("Dusman")) Destroy(d);
         foreach (GameObject m in GameObject.FindGameObjectsWithTag("Mermi")) Destroy(m);
         gameObject.transform.position = BaslangicPozisyon;
-
+        carpanDegeri.CarpanSifirla();
         Time.timeScale = 1f;
 
     }

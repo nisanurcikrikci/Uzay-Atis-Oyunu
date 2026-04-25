@@ -53,6 +53,7 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 Assets/
  ArkaPlanKontrolKod.cs
  AyarlarKod.cs
+ CarpanYoneticiKod.cs
  DusmanUreticiKod.cs
  FlashKod.cs
  GezegenKod.cs
