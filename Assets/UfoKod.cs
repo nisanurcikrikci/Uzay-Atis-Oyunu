@@ -21,7 +21,7 @@ public class UfoKod : MonoBehaviour
     {
         _hiz.x = -1.0f;
 
-        if (Puan.SuAnkiPuan() > 10)
+        if (Puan.SuAnkiPuan() > 50)
         {
             zamanlayici += Time.deltaTime;
             if (zamanlayici >= 2f)

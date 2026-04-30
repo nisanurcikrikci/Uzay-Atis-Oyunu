@@ -13,7 +13,7 @@ public class CarpanYoneticiKod : MonoBehaviour
     private int aktifCarpan = 1;
     private float kalanSure = 0f;
     private bool CarpanVarMi = false;
-    private float toplamSure = 5;
+    private float toplamSure = 2;
 
 
     void Start()
@@ -40,7 +40,7 @@ public class CarpanYoneticiKod : MonoBehaviour
 
     public int CarpanArttir()
     {
-        kalanSure = 5f;
+        kalanSure = 2f;
 
         aktifCarpan++;
         CarpanVarMi = true;

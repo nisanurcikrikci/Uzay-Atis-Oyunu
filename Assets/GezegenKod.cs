@@ -30,11 +30,11 @@ public class GezegenKod : MonoBehaviour
         transform.Translate(Vector2.left * hareketHizi * Time.deltaTime);
         if (canBariGorunmeSuresi > 0)
         {
-            canBariGorunmeSuresi -= Time.deltaTime; // Saniyeyi geri say
+            canBariGorunmeSuresi -= Time.deltaTime;
 
             if (canBariGorunmeSuresi <= 0)
             {
-                canGrubu.SetActive(false); // Süre bitince kapat
+                canGrubu.SetActive(false);
             }
         }
 
@@ -53,7 +53,7 @@ public class GezegenKod : MonoBehaviour
             CanSimge.size = yeniBoyut;
         }
 
-        canGrubu.SetActive(true); // Barı aç
+        canGrubu.SetActive(true);
         canBariGorunmeSuresi = 1f;
 
         if (can <= 0)

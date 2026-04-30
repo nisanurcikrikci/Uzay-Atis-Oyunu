@@ -24,18 +24,20 @@ public class MenuKontrol : MonoBehaviour
         Time.timeScale = 1f;
 
     }
-
     public void OyundanCikis()
     {
-        Debug.Log("Oyundan Çıkıldı");
-        Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#elif UNITY_WEBGL
+            Application.ExternalEval("location.reload();");
+#else
+            Application.Quit();
+#endif
     }
     void Start()
     {
         _animator = GetComponent<Animator>();
     }
-
-
     void Update()
     {
 

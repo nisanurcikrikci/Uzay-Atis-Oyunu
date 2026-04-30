@@ -2,15 +2,15 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PlayerHasarKod : MonoBehaviour
 {
-    public float can = 100f;
+    public float can = 90f;
     public Animator _animator;
-    float bekletmeSayaci = 0; // Zamanı saymak için
     bool HasarAldiMi = false;
     public Image canBariGorseli;
     Vector2 BaslangicPozisyon;
     public SesKod SesYonetici;
     public GameObject ileri;
     public CarpanYoneticiKod carpanDegeri;
+    public GameObject oyunBitti;
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -25,8 +25,8 @@ public class PlayerHasarKod : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Hasar alma şartı (Gezegen veya UFO gelirse ve o an durmamışsak)
-        if (collision.CompareTag("Dusman") && !HasarAldiMi)
+
+        if (collision.CompareTag("Dusman"))
         {
             HasarAl();
         }
@@ -35,22 +35,30 @@ public class PlayerHasarKod : MonoBehaviour
     void HasarAl()
     {
         SesYonetici.PatlamaSesiCal();
-        can -= 20f;
+        can -= 30f;
+        if (canBariGorseli != null)
+        {
+            canBariGorseli.fillAmount = can / 90f;
+        }
+        Debug.Log(can);
         HasarAldiMi = true;
-        bekletmeSayaci = 0;
         ileri.SetActive(false);
-        _animator.SetBool("HasarAldiMi", HasarAldiMi);
+        if (can <= 0)
+        {
+            OyunBitti();
+        }
+        else
+        {
+            _animator.SetBool("HasarAldiMi", HasarAldiMi);
+        }
         Time.timeScale = 0f;
-
     }
 
     void OyunuDevamEttir()
     {
         HasarAldiMi = false;
-        if (canBariGorseli != null)
-        {
-            canBariGorseli.fillAmount = can / 100f;
-        }
+
+
         _animator.SetBool("HasarAldiMi", HasarAldiMi);
         foreach (GameObject d in GameObject.FindGameObjectsWithTag("Dusman")) Destroy(d);
         foreach (GameObject m in GameObject.FindGameObjectsWithTag("Mermi")) Destroy(m);
@@ -58,5 +66,10 @@ public class PlayerHasarKod : MonoBehaviour
         carpanDegeri.CarpanSifirla();
         Time.timeScale = 1f;
 
+    }
+    void OyunBitti()
+    {
+        oyunBitti.SetActive(true);
+        Time.timeScale = 0f;
     }
 }

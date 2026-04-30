@@ -12,7 +12,7 @@ public class PlazmaKod : MonoBehaviour
         _rb.linearVelocity = Vector2.right * Hiz;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (transform.position.x > 1.682f) Destroy(gameObject);
