@@ -11,8 +11,8 @@ public class UfoKod : MonoBehaviour
 
     void Start()
     {
-        SesYonetici = GameObject.Find("SesYonetici").GetComponent<SesKod>();
-        Puan = GameObject.Find("PuanYoneticisi").GetComponent<PuanKod>();
+        //SesYonetici = GameObject.Find("SesYonetici").GetComponent<SesKod>();
+        //Puan = GameObject.Find("PuanYonetici").GetComponent<PuanKod>();
         _rigidbody = GetComponent<Rigidbody2D>();
         HedefY = transform.position.y;
     }

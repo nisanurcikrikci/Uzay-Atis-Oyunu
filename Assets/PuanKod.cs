@@ -10,9 +10,12 @@ public class PuanKod : MonoBehaviour
 
     public void PuanEkle(int miktar)
     {
-
-        carpan = carpanDegeri.CarpanArttir();
+        Debug.Log(miktar);
+        // carpan = carpanDegeri.CarpanArttir();
+        carpan = 1;
+        Debug.Log("2");
         toplamPuan = toplamPuan + miktar * carpan;
+        Debug.Log("3");
         puan.text = toplamPuan.ToString();
     }
     public int SuAnkiPuan()

@@ -106,8 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1a3acbbc8a9f64fbc2849738e03534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  SesYonetici: {fileID: 0}
-  Puan: {fileID: 0}
+  SesYonetici: {fileID: 4879815079534769799, guid: 0acbccde1de99134aa28404196a42636, type: 3}
+  Puan: {fileID: 6778388602220801827, guid: 65d73ea9b9591234b857f18771cec655, type: 3}
 --- !u!50 &7376629732536574625
 Rigidbody2D:
   serializedVersion: 5

@@ -203,4 +203,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Hiz: 1
-  SesYonetici: {fileID: 0}
+  SesYonetici: {fileID: 4879815079534769799, guid: 0acbccde1de99134aa28404196a42636, type: 3}

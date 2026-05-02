@@ -12,7 +12,7 @@ public class PlayerKontrolKod : MonoBehaviour
     Vector2 _hiz = Vector2.zero;
     void Start()
     {
-        SesYonetici = GameObject.Find("SesYonetici").GetComponent<SesKod>();
+        //SesYonetici = GameObject.Find("SesYonetici").GetComponent<SesKod>();
         _animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }

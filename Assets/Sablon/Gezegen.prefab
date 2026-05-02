@@ -377,8 +377,8 @@ MonoBehaviour:
   CanSimge: {fileID: 393685835001253561}
   canGrubu: {fileID: 2345171944797489335}
   canBariGorunmeSuresi: 1
-  SesYonetici: {fileID: 0}
-  Puan: {fileID: 0}
+  SesYonetici: {fileID: 4879815079534769799, guid: 0acbccde1de99134aa28404196a42636, type: 3}
+  Puan: {fileID: 6778388602220801827, guid: 65d73ea9b9591234b857f18771cec655, type: 3}
 --- !u!60 &7745311280738670677
 PolygonCollider2D:
   m_ObjectHideFlags: 0

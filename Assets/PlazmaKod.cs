@@ -7,7 +7,7 @@ public class PlazmaKod : MonoBehaviour
     public SesKod SesYonetici;
     void Start()
     {
-        SesYonetici = GameObject.Find("SesYonetici").GetComponent<SesKod>();
+        //SesYonetici = GameObject.Find("SesYonetici").GetComponent<SesKod>();
         _rb = GetComponent<Rigidbody2D>();
         _rb.linearVelocity = Vector2.right * Hiz;
     }
