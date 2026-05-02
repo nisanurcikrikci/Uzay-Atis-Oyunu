@@ -7,7 +7,7 @@ public class ArkaPlanKontrolKod : MonoBehaviour
 
     public Transform Yildizlar;
     public float YildizHizi = 0.2f;
-
+    public AudioSource muzik;
     public Transform Gezegen;
     public Transform Gezegen2;
     public float GezegenHizi = 0.02f;
@@ -17,7 +17,7 @@ public class ArkaPlanKontrolKod : MonoBehaviour
     public Transform SpawnGezegen;
     void Start()
     {
-
+        muzik.Play();
     }
 
     // Update is called once per frame

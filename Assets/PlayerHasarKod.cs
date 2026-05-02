@@ -14,7 +14,7 @@ public class PlayerHasarKod : MonoBehaviour
     void Start()
     {
         _animator = GetComponent<Animator>();
-        //SesYonetici = GameObject.Find("SesYonetici").GetComponent<SesKod>();
+        SesYonetici = GameObject.Find("SesYonetici").GetComponent<SesKod>();
         BaslangicPozisyon = transform.position;
 
     }

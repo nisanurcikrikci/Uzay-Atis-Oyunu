@@ -16,8 +16,8 @@ public class GezegenKod : MonoBehaviour
     void Start()
     {
 
-        //SesYonetici = GameObject.Find("SesYonetici").GetComponent<SesKod>();
-        //Puan = GameObject.Find("PuanYonetici").GetComponent<PuanKod>();
+        SesYonetici = GameObject.Find("SesYonetici").GetComponent<SesKod>();
+        Puan = GameObject.Find("PuanYoneticisi").GetComponent<PuanKod>();
         if (CanSimge != null)
         {
             ilkGenislik = CanSimge.size.x;

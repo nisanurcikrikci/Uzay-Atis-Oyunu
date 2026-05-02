@@ -12,7 +12,7 @@ public class PlayerKontrolKod : MonoBehaviour
     Vector2 _hiz = Vector2.zero;
     void Start()
     {
-        //SesYonetici = GameObject.Find("SesYonetici").GetComponent<SesKod>();
+        SesYonetici = GameObject.Find("SesYonetici").GetComponent<SesKod>();
         _animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }
@@ -36,7 +36,7 @@ public class PlayerKontrolKod : MonoBehaviour
         bool asagiBasildiMi = false;
         bool sagBasildiMi = false;
         bool solBasildiMi = false;
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             yukariBasildiMi = true;
             if (_hiz.y < 0.5f)
@@ -47,7 +47,7 @@ public class PlayerKontrolKod : MonoBehaviour
             yukariBasildiMi = false;
 
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             asagiBasildiMi = true;
             if (_hiz.y > -0.5f)
@@ -57,7 +57,7 @@ public class PlayerKontrolKod : MonoBehaviour
         {
             asagiBasildiMi = false;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             if (_hiz.x < 0.5f)
                 _hiz += Vector2.right * 0.1f;
@@ -69,7 +69,7 @@ public class PlayerKontrolKod : MonoBehaviour
             sagBasildiMi = false;
             ileri.SetActive(false);
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             if (_hiz.x > -0.5f)
                 _hiz += Vector2.left * 0.1f;

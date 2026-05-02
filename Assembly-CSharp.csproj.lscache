@@ -54,6 +54,7 @@ Assets/
  ArkaPlanKontrolKod.cs
  AyarlarKod.cs
  CarpanYoneticiKod.cs
+ DusmanMermiKod.cs
  DusmanUreticiKod.cs
  FlashKod.cs
  GezegenKod.cs
@@ -63,6 +64,7 @@ Assets/
  PlazmaKod.cs
  PuanKod.cs
  SesKod.cs
+ Ufo2Kod.cs
  UfoKod.cs
 Temp/obj/Assembly-CSharp/.NETStandard,Version=v2.1.AssemblyAttributes.cs
 

@@ -5,10 +5,9 @@ public class SesKod : MonoBehaviour
     public AudioSource Patlama;
     public AudioSource Vurma;
     public AudioSource Mermi;
-    public AudioSource Muzik;
     void Start()
     {
-        Muzik.Play();
+
     }
 
 

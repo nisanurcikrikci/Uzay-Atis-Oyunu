@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UfoKod : MonoBehaviour
+public class Dusman2Kod : MonoBehaviour
 {
     public SesKod SesYonetici;
     Vector2 _hiz = Vector2.zero;
@@ -8,6 +8,8 @@ public class UfoKod : MonoBehaviour
     float HedefY;
     float zamanlayici = 0f;
     public PuanKod Puan;
+    public Transform Namlu;
+    public GameObject MermiSablon;
 
     void Start()
     {
@@ -15,15 +17,14 @@ public class UfoKod : MonoBehaviour
         Puan = GameObject.Find("PuanYoneticisi").GetComponent<PuanKod>();
         _rigidbody = GetComponent<Rigidbody2D>();
         HedefY = transform.position.y;
+        InvokeRepeating("AtesEt", 2f, 5f);
     }
 
     void Update()
     {
-        _hiz.x = -1.0f;
+        _hiz.x = -0.2f;
 
-        int a = Puan.SuAnkiPuan();
-        Debug.Log(a);
-        if (Puan.SuAnkiPuan() > 20)
+        if (Puan.SuAnkiPuan() >= 40)
         {
             zamanlayici += Time.deltaTime;
             if (zamanlayici >= 2f)
@@ -62,5 +63,10 @@ public class UfoKod : MonoBehaviour
             Destroy(gameObject);
 
         }
+    }
+    public void AtesEt()
+    {
+        var yeniMermi = GameObject.Instantiate(MermiSablon);
+        yeniMermi.transform.position = Namlu.position;
     }
 }
