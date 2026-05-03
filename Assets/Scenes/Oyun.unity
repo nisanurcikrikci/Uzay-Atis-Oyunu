@@ -5173,7 +5173,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
@@ -5541,8 +5541,8 @@ Transform:
   m_GameObject: {fileID: 1908079377}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.19852, y: 0.099, z: 0}
-  m_LocalScale: {x: 3.5639746, y: 0.1526379, z: 1}
+  m_LocalPosition: {x: -0.19852, y: 0.07249, z: 0}
+  m_LocalScale: {x: 3.5639746, y: 0.20568788, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 162696374}
@@ -5679,8 +5679,8 @@ Transform:
   m_GameObject: {fileID: 2018548435}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.19852, y: -1.985, z: 0}
-  m_LocalScale: {x: 3.5639746, y: 0.1526379, z: 1}
+  m_LocalPosition: {x: -0.19852, y: -1.98747, z: 0}
+  m_LocalScale: {x: 3.5639746, y: 0.1476909, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 162696374}
